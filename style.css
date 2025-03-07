@@ -72,6 +72,8 @@ textarea:not([rows]) {
   scroll-margin-block: 5ex;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html, body {
   height: 100dvh;
   margin: 0;
@@ -111,6 +113,12 @@ main {
 .bottom p {
   margin-bottom: 30px;
   color: #cec9c9;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 .bottom button {
@@ -123,6 +131,12 @@ main {
 
 .bottom h1 {
   color: white;
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
 
 svg {
@@ -132,6 +146,7 @@ svg {
   padding: 10px;
   border-radius: 50px;
   margin-right: 10px;
+  transition: background-color 0.5s;
 }
 
 footer {
@@ -141,10 +156,72 @@ footer {
   position: static;
   bottom: 0;
   width: 100%;
-  margin-top: 20px;
+  
 }
 
 svg:hover {
   border-color: blueviolet;
 }
 
+
+@media (min-width: 40rem) {
+  body {
+    background: hsl(257, 40%, 49%) url(./images/bg-desktop.svg);;
+  padding: 40px;
+  }
+
+  .top {
+    /* border: 2px solid wheat; */
+    width: 50%;
+  }
+
+  main {
+    max-width: minmax(60em, 85%);
+    margin: auto;
+    flex-direction: row;
+    /* border: 2px solid pink; */
+    height: auto;
+    margin-top: 30px;
+
+  }
+
+  .top img {
+    width: 100%;
+  }
+  .bottom {
+    width: 50%;
+    text-align: left;
+    padding: 50px;
+  }
+
+  .bottom h1 {
+    max-width: 15em;
+    /* border: 2px solid pink; */
+    font-size: 2em;
+    line-height: 50px;
+  }
+
+  .bottom p {
+    max-width: 30em;
+    /* border: 2px solid pink; */
+    line-height: 30px;
+    font-size: 1.2em;
+  }
+
+  button {
+    width: 50em;
+    cursor: pointer;
+    transition: background-color 0.5s;
+  }
+
+  button:hover {
+    color: white;
+    background-color: blueviolet;
+  }
+
+  footer {
+    text-align: right;
+  }
+  
+
+}
