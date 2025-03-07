@@ -127,6 +127,7 @@ main {
   border-radius: 20px;
   border: none;
   color: hsl(257, 40%, 49%);
+  cursor: pointer;
 }
 
 .bottom h1 {
@@ -147,6 +148,7 @@ svg {
   border-radius: 50px;
   margin-right: 10px;
   transition: background-color 0.5s;
+  cursor: pointer;
 }
 
 footer {
